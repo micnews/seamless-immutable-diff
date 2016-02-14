@@ -81,3 +81,20 @@ test('arras, move from the end to the begining', t => {
 
   t.same(actual, expected);
 });
+test('arrays, multiple adds', t => {
+  const from = Immutable([1, 3]);
+  const to = [1, 2, {foo: {bar: true}, beep: 'boop'}, 3, 4];
+  const expected = to;
+  const actual = diff(from, to).asMutable();
+
+  t.same(actual, expected);
+});
+
+test('update', t => {
+  const to = [1, 2, {foo: {bar: true}, beep: 'boop'}, 3, 4];
+  const from = Immutable(to);
+  const expected = to;
+  const actual = diff(from, to).asMutable();
+
+  t.same(actual, expected);
+});
