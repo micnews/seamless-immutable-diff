@@ -25,5 +25,8 @@
     "nyc": "^5.6.0",
     "seamless-immutable": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dift": "^0.1.12",
+    "immutable-array-methods": "^1.0.0"
+  }
 }
