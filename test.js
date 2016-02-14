@@ -27,6 +27,25 @@ test('works when adding properties', t => {
   t.is(actual.foo, expected.foo);
 });
 
+test('works when removing properties', t => {
+  const from = Immutable({foo: {bar: 'bas'}, beep: {boop: true}});
+  const to = { foo: {bar: 'bas'} };
+  const expected = from.without('beep');
+  const actual = diff(from, to);
+
+  t.same(actual.asMutable(), expected.asMutable());
+  t.is(actual.foo, expected.foo);
+});
+
+test('works with undefined in to', t => {
+  const from = Immutable({foo: {bar: 'bas'}, beep: undefined});
+  const to = { foo: {bar: 'bas'}, beep: undefined };
+  const expected = from;
+  const actual = diff(from, to);
+
+  t.is(actual, expected);
+});
+
 test('works when chaging object to none-object', t => {
   const from = Immutable({ foo: {bar: 'bas'} });
   const to = Immutable({ foo: true });
