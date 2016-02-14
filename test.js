@@ -64,6 +64,15 @@ test('arrays, move a property', t => {
   t.same(actual, expected);
 });
 
+test('arrays move', t => {
+  const from = Immutable([1, 2]);
+  const to = [2, 1];
+  const expected = to;
+  const actual = diff(from, to).asMutable();
+
+  t.same(actual, expected);
+});
+
 test('arrays, reverse', t => {
   const from = Immutable([1, 2, 3, 4]);
   const to = [4, 3, 2, 1];
