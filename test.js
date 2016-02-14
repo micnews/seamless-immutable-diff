@@ -146,3 +146,12 @@ test('array remove', t => {
 
   t.same(actual, expected);
 });
+
+test('nested arrays', t => {
+  const from = Immutable([[{nested: true}]]);
+  const to = [[{nested: true}, {foo: 'bar'}]];
+  const expected = to;
+  const actual = diff(from, to).asMutable();
+
+  t.same(actual, expected);
+});
