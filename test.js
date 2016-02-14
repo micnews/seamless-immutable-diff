@@ -137,3 +137,12 @@ test('equal array', t => {
 
   t.same(actual, expected);
 });
+
+test('array remove', t => {
+  const from = Immutable([1, 2, 3]);
+  const to = [1, 2];
+  const expected = to;
+  const actual = diff(from, to).asMutable();
+
+  t.same(actual, expected);
+});
