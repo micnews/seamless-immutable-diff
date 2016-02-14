@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "nyc ava",
+    "coverage": "npm test && nyc report --reporter=lcov && open coverage/lcov-report/index.html",
     "prepublish": "mkdir -p dist && babel lib --out-dir dist"
   },
   "repository": {
