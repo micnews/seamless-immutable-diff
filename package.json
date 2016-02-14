@@ -4,6 +4,7 @@
   "description": "Given two objects, get the seamless-immutable-diff between them (through deep-equal)",
   "main": "dist/index.js",
   "scripts": {
+    "benchmark": "babel-node benchmark.js",
     "test": "nyc ava",
     "coverage": "npm test && nyc report --reporter=lcov && open coverage/lcov-report/index.html",
     "prepublish": "mkdir -p dist && babel lib --out-dir dist"
