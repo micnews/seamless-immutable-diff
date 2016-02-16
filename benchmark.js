@@ -4,7 +4,7 @@ import Immutable from 'seamless-immutable';
 
 const input = [];
 for (let i = 0; i < 3; i++) {
-  input.push({ foo: 'bar', beep: 'boop', hello: 'world'});
+  input.push({foo: 'bar', beep: 'boop', hello: 'world'});
 }
 const from = Immutable(input);
 
