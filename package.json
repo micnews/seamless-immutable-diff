@@ -1,6 +1,6 @@
 {
   "name": "seamless-immutable-diff",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Given two objects, get the seamless-immutable-diff between them",
   "main": "dist/index.js",
   "scripts": {
