@@ -1,6 +1,6 @@
 # seamless-immutable-diff [![Build Status](https://travis-ci.org/micnews/seamless-immutable-diff.png?branch=master)](https://travis-ci.org/micnews/seamless-immutable-diff)
 
-Given two objects, get the seamless-immutable-diff between them (through deep-equal)
+Given two objects, get the seamless-immutable-diff between them
 
 ## Installation
 
