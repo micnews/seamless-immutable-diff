@@ -29,7 +29,7 @@
     "package-json-to-readme": "^1.5.0",
     "seamless-immutable": "^6.0.0",
     "semistandard": "^7.0.5",
-    "snazzy": "^3.0.0"
+    "snazzy": "^4.0.0"
   },
   "dependencies": {
     "dift": "^0.1.12",
